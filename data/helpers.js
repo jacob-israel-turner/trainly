@@ -8,7 +8,10 @@ export class DataStore {
   }
 
   fetch (key) {
-    return this.store[key]
+    return {
+      _key: key,
+      ...this.store[key]
+    }
   }
 
   keys () {
