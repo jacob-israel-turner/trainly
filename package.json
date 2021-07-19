@@ -1,0 +1,25 @@
+{
+  "name": "trainly",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:jacob-israel-turner/trainly.git",
+  "author": "Jacob Turner <j.israel.turner@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^3.0.1",
+    "graphql": "^15.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0"
+  }
+}
