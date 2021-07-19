@@ -1,4 +1,4 @@
-import { stops, stations } from '../../../data/index.js'
+import { stations } from '../../../data/index.js'
 
 export default {
   station: ({ station }) => {
@@ -6,8 +6,5 @@ export default {
       id: station,
       ...stations.fetch(station)
     }
-  },
-  stops: ({ id }) => {
-    return stops.fetch(id)
   }
 }

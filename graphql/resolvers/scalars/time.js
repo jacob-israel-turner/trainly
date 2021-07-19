@@ -13,8 +13,7 @@ export default new GraphQLScalarType({
   serialize (value) {
     if (isNil(value)) return null
     validateTime(value)
-    // remove seconds
-    return value.slice(0, -3)
+    return value
   }
 })
 
