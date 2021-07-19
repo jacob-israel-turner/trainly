@@ -1,13 +1,19 @@
 import { gql } from 'apollo-server'
 
 const typeDefs = gql`
-  type Book {
-    title: String
-    author: String
+  type Station {
+    author: String!
+    name: String!
+    lines: [Line!]!
+  }
+
+  type Line {
+    name: String!
+    station: Station!
   }
 
   type Query {
-    books: [Book]
+    stations: [Station!]!
   }
 `
 
