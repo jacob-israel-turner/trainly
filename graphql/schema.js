@@ -3,6 +3,10 @@ import { gql } from 'apollo-server'
 const typeDefs = gql`
   scalar Time
 
+  input StationInput {
+    id: ID!
+  }
+
   type Line {
     name: String!
     id: ID!
@@ -23,6 +27,7 @@ const typeDefs = gql`
   }
 
   type Query {
+    station(input: StationInput!): Station!
     stations: [Station!]!
   }
 `
