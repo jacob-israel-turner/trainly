@@ -8,6 +8,11 @@ const typeDefs = gql`
     name: String!
   }
 
+  input NextOverlapInput {
+    after: Time!
+    stationId: ID!
+  }
+
   input SetLineStopsInput {
     lineId: ID!
     stops: [StopInput!]!
@@ -29,6 +34,12 @@ const typeDefs = gql`
     stops: [Stop!]!
   }
 
+  type NextOverlapPayload {
+    station: Station!
+    time: Time!
+    lines: [Line!]!
+  }
+
   type Station {
     author: String!
     id: ID!
@@ -42,6 +53,7 @@ const typeDefs = gql`
   }
 
   type Query {
+    nextOverlap(input: NextOverlapInput!): NextOverlapPayload!
     station(input: StationInput!): Station!
     stations: [Station!]!
   }

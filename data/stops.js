@@ -58,57 +58,78 @@ export default new DataStore({
   }],
   OREM2: [{
     station: 'OREM',
-    time: '05:30'
+    time: '05:45'
   }, {
     station: 'OREM',
     time: '06:30'
   }, {
     station: 'OREM',
-    time: '07:30'
+    time: '07:15'
   }, {
     station: 'OREM',
-    time: '08:30'
+    time: '08:00'
+  }, {
+    station: 'OREM',
+    time: '08:45'
   }, {
     station: 'OREM',
     time: '09:30'
   }, {
     station: 'OREM',
-    time: '10:30'
+    time: '10:15'
   }, {
     station: 'OREM',
-    time: '11:30'
+    time: '11:00'
+  }, {
+    station: 'OREM',
+    time: '11:45'
   }, {
     station: 'OREM',
     time: '12:30'
   }, {
     station: 'OREM',
-    time: '13:30'
+    time: '13:15'
   }, {
     station: 'OREM',
-    time: '14:30'
+    time: '14:00'
+  }, {
+    station: 'OREM',
+    time: '14:45'
   }, {
     station: 'OREM',
     time: '15:30'
   }, {
     station: 'OREM',
-    time: '16:30'
+    time: '16:15'
   }, {
     station: 'OREM',
-    time: '17:30'
+    time: '17:00'
   }, {
     station: 'OREM',
-    time: '19:30'
+    time: '17:45'
   }, {
     station: 'OREM',
-    time: '20:30'
+    time: '18:30'
+  }, {
+    station: 'OREM',
+    time: '19:15'
+  }, {
+    station: 'OREM',
+    time: '20:00'
+  }, {
+    station: 'OREM',
+    time: '20:45'
   }, {
     station: 'OREM',
     time: '21:30'
   }, {
     station: 'OREM',
-    time: '22:30'
+    time: '22:15'
   }, {
     station: 'OREM',
-    time: '23:30'
+    time: '23:00'
+  }, {
+    station: 'OREM',
+    time: '23:45'
   }]
 })
