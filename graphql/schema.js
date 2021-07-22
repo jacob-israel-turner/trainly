@@ -8,8 +8,18 @@ const typeDefs = gql`
     name: String!
   }
 
+  input SetLineStopsInput {
+    lineId: ID!
+    stops: [StopInput!]!
+  }
+
   input StationInput {
     id: ID!
+  }
+
+  input StopInput {
+    station: ID!
+    time: Time!
   }
 
   type Line {
@@ -38,6 +48,7 @@ const typeDefs = gql`
 
   type Mutation {
     addLine(input: AddLineInput!): Line!
+    setLineStops(input: SetLineStopsInput!): Line!
   }
 `
 
