@@ -53,7 +53,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    nextOverlap(input: NextOverlapInput!): NextOverlapPayload!
+    nextOverlap(input: NextOverlapInput!): NextOverlapPayload
     station(input: StationInput!): Station!
     stations: [Station!]!
   }

@@ -7,6 +7,7 @@ export default async function nextOverlap (_, { input: { after, stationId } }) {
   if (isNil(station)) throw new UserInputError(`Station with id ${stationId} does not exist`)
   const stopKeys = stops.keys()
   const schedules = stopKeys.map(key => ({ lineId: key, stops: stops.fetch(key) }))
+
   const times = new Set()
   const timesHash = {}
   schedules.forEach(({ lineId, stops }) => {
@@ -22,6 +23,7 @@ export default async function nextOverlap (_, { input: { after, stationId } }) {
     if (timeIsGreater(a, b)) return 1
     else return -1
   })
+
   const firstOverlapAfter = sortedTimes.find(time => {
     if (timeIsGreater(time, after) && timesHash[time].length >= 2) return true
     return false
@@ -38,6 +40,7 @@ export default async function nextOverlap (_, { input: { after, stationId } }) {
       if (timesHash[time].length >= 2) return true
       return false
     })
+    if (isNil(overlapNextDay)) return null
     const lineKeys = timesHash[overlapNextDay]
     return {
       station: { id: stationId, ...station },
